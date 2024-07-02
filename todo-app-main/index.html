@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <p>Todo</p>
+      <div class="icons">
+        <i><img class="icon-i" src="images/icon-sun.svg" alt=""></i>
+        <img class="icon-ii" src="images/icon-moon.svg" alt="">
+      </div>
+    </header>
+
+    <form class="todo">
+      <input class="todo-input" type="text" name="todo" placeholder="Create a new todo...">
+      <span class="text-circle"></span>
+    </form>
+
+    <div class="ul-container">
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="checkbox" class="checkbox">
+            <span class="circle"></span>
+            <span class="item">Complete online Javascript</span>
+          </label>
+          <div>
+            <img class="cancel" src="images/icon-cross.svg" alt="">
+          </div>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="checkbox" class="checkbox">
+            <span class="circle"></span>
+            <span class="item">Jog around the park 3 times</span>
+          </label>
+          <div>
+            <img class="cancel" src="images/icon-cross.svg" alt="">
+          </div>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="checkbox" class="checkbox">
+            <span class="circle"></span>
+            <span class="item">Create a new role</span>
+          </label>
+          <div>
+            <img class="cancel" src="images/icon-cross.svg" alt="">
+          </div>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="checkbox" class="checkbox">
+            <span class="circle"></span>
+            <span class="item">I am self determined</span>
+          </label>
+          <div>
+            <img class="cancel" src="images/icon-cross.svg" alt="">
+          </div>
+        </li>
+      </ul>
+
+      <div class="filter">
+        <p class="p-i"><span class="no-items">4</span>items left</p>
+        <div class="flex-items">
+          <p class="all">All</p>
+          <p class="active">Active</p>
+          <p class="completed">Completed</p>
+        </div>
+        <p class="p-ii">Clear Completed</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Drag and drop to reorder list</p>
+    </footer>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+  <script src="sandbox.js"></script>
+</body>
+
+</html>

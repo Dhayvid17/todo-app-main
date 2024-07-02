@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(235, 21%, 11%);
+    background-image: url(images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 250px;
+}
+
+.body-active {
+    background-color: hsl(236, 33%, 92%);
+    background-image: url(images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 250px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 500px;
+    transform: translateY(40px);
+}
+
+.icon-ii {
+    display: none;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+header p {
+    color: white;
+    font-size: 35px;
+    font-weight: 550;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.todo {
+    position: relative;
+}
+
+.todo .todo-input {
+    background-color: hsl(235, 21%, 11%);
+    border: none;
+    border-radius: 5px;
+    color: hsl(234, 39%, 85%);
+    font-size: 15px;
+    height: 8vh;
+    letter-spacing: 1px;
+    padding-left: 55px;
+    width: 100%;
+}
+
+.todo-active {
+    background-color: hsl(0, 0%, 98%);
+    border: none;
+    border-radius: 5px;
+    color: hsl(235, 19%, 35%);
+    font-size: 15px;
+    height: 8vh;
+    letter-spacing: 1px;
+    padding-left: 55px;
+    width: 100%;
+}
+
+.todo input::placeholder {
+    color: hsl(234, 11%, 52%);
+    letter-spacing: 1px;
+    /* padding-left: 55px; */
+}
+
+.text-circle {
+    background-color: inherit;
+    border: 1px solid hsl(234, 11%, 52%);
+    border-radius: 50%;
+    height: 3vh;
+    left: 20px;
+    position: absolute;
+    top: 16px;
+    width: 20px;
+}
+
+.ul-container {
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 6px;
+    box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.9);
+    margin: 20px 0;
+    width: 100%;
+}
+
+.container-active {
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 6px;
+    box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.9);
+    margin: 20px 0;
+    width: 100%;
+}
+
+.ul-container li {
+    align-items: center;
+    border-bottom: 1px solid hsl(234, 11%, 52%);
+    cursor: pointer;
+    display: flex;
+    height: 8vh;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 18px;
+    position: relative;
+}
+
+.ul-container .checkbox {
+    margin-left: 10px;
+    opacity: 0;
+}
+
+.ul-container .circle {
+    background-color: inherit;
+    border: 1px solid hsl(234, 11%, 52%);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 3vh;
+    left: 22px;
+    position: absolute;
+    top: 15px;
+    width: 20px;
+}
+
+/* input[type="checkbox"]:checked + .circle{
+    background-image: url(images/icon-check.svg), linear-gradient(130deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1; 
+} */
+
+.ul-container .checkbox:checked+.circle {
+    background-image: url(images/icon-check.svg), linear-gradient(130deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+.ul-container .item {
+    color: hsl(234, 39%, 85%);
+    cursor: pointer;
+    letter-spacing: 1px;
+    padding-left: 11px;
+}
+
+.item-active {
+    color: hsl(235, 19%, 35%);
+    cursor: pointer;
+    letter-spacing: 1px;
+    padding-left: 11px;
+}
+
+.ul-container .checkbox:checked~.item {
+    color: hsl(234, 11%, 52%);
+    text-decoration: line-through;
+}
+
+.ul-container .cancel {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.filter {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 6vh;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.filter .flex-items {
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+}
+
+.no-items {
+    padding-right: 3px;
+    visibility: visible;
+}
+
+.filter .p-i {
+    color: hsl(234, 11%, 52%);
+    font-size: 12px;
+}
+
+.filter .p-ii {
+    color: hsl(234, 11%, 52%);
+    font-size: 13px;
+}
+
+.flex-items p {
+    color: hsl(234, 11%, 52%);
+    font-size: 15px;
+}
+
+.flex-items p:nth-child(1) {
+    color: hsl(220, 98%, 61%);
+}
+
+footer {
+    margin-top: 45px;
+    text-align: center;
+}
+
+footer p {
+    color: hsl(234, 11%, 52%);
+    font-size: 11.5px;
+    letter-spacing: 1px;
+}
+
+/* PSUEDO ELMENTS */
+
+.todo input:focus {
+    border: none;
+    outline: none;
+}
+
+.ul-container .circle:hover {
+    /* border-image: linear-gradient(130deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))1; */
+    border-color: inherit;
+}
+
+.ul-container li:hover .cancel {
+    opacity: 1;
+}
+
+.filter .p-i:hover,
+.filter .p-ii:hover,
+.flex-items p:nth-child(2):hover,
+.flex-items p:nth-child(3):hover {
+    color: hsl(236, 33%, 92%);
+}
+
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 650px) {
+    main {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    main {
+        max-width: 330px;
+        transform: translateY(20px);
+    }
+
+    header p {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+
+    .icons img{
+        width: 85%;
+    }
+
+    .todo .todo-input {
+        font-size: 12px;
+        height: 6.5vh;
+    }
+
+    .todo-active {
+        font-size: 12px;
+        height: 6.5vh;
+    }
+
+    .text-circle {
+        top: 11px;
+    }
+
+    .ul-container li{
+        height: 7vh;
+    }
+
+    .ul-container .circle{
+        top: 13px;
+    }
+
+    .ul-container .item{
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .filter {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        height: 6.5vh;
+        justify-content: space-between;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .filter .flex-items {
+        align-items: center;
+        background-color: hsl(235, 24%, 19%);
+        border-radius: 6px;
+        height: 6vh;
+        justify-content: center;
+        left: 2px;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+    }
+
+    .filter .flex-items p {
+         margin: 0 7px;
+    }
+
+    footer{
+        margin-top: 80px;
+    }
+
+
+
+
+
+
+
+}
+
